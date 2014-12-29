@@ -5,6 +5,7 @@ class CreatePhotos < ActiveRecord::Migration
       t.integer :asset_file_size
       t.string :asset_content_type
       t.boolean :active, default: true
+      t.string :type
       t.timestamps
     end
   end
