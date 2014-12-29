@@ -1,0 +1,8 @@
+ru:
+  certificates:
+    new:
+      add_certificate: 'Добавить Сертификат'
+    index:
+      certificates: 'Сертификаты'
+    edit:
+      edit_certificate: 'Редактировать Сертификат'

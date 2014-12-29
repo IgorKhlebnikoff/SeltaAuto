@@ -1,0 +1,5 @@
+en:
+  answers:
+    form:
+      body: 'Body:'
+      send_answer: 'Send'

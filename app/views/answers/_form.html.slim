@@ -1,0 +1,7 @@
+.form.answers-form
+  form name="formAddAnswer" ng-submit="sendAnswer()" novalidate=""
+    = label_tag 'body', t('.body')
+    = text_area :body, nil, class: 'form-control', required: true, 'ng-model' => 'body', name: 'body'
+    .form-text-error ng-show="formAddAnswer.body.$error.required && formAddAnswer.body.$dirty" Поле не заполнено
+
+    input type="submit" value="#{t('.send_answer')}" class="btn" ng-disabled="formAddAnswer.$invalid"

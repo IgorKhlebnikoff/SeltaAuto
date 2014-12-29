@@ -1,0 +1,21 @@
+.form
+  = form_for @content, builder: StandartBuilder do |f|
+    div= f.error_messages
+
+    - if @content.is_a?(News)
+      div
+        = f.label :category_id, t('.category')
+        = f.select :category_id, Category.all.map { |category| [category.name, category.id] }, { include_blank: true }, { class: 'form-control' }
+    div
+      = f.label :name, t('name')
+      = f.text_field :name, class: 'form-control'
+    div
+        = f.label :description, t('description')
+        = f.text_area :description, class: 'form-control', id: 'add_content'
+    div
+      = f.label :picture, t('picture')
+      - if @content.is_a?(Partner)
+        strong  200x268
+      = f.file_field :picture, class: 'form-control'
+    div
+      = f.submit t('save'), class: 'btn'

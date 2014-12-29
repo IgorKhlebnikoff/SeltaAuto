@@ -1,0 +1,12 @@
+.wrap
+  .photos
+    h2
+      = t('.photos')
+      = link_to "(#{t('add')})", new_photo_path, class: 'add-content' if current_user.try(:is_admin?)
+
+    .photos-list
+      - @photos.each do |photo|
+        .photo-item style="background-image: url(#{photo.asset.url(:logo)})"
+          = link_to fa_icon('search-plus'), photo.asset.url(:original), data: { lightbox: 'gallery' }
+          .photo-action = link_to fa_icon('trash-o'), photo, data: { confirm: t('are_you_sure')}, method: :delete if current_user.try(:is_admin?)
+          .photo-action = link_to fa_icon('pencil-square-o'), edit_photo_path(photo), class: 'icons', data: { confirm: t('are_you_sure')}, method: :get if current_user.try(:is_admin?)

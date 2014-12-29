@@ -1,0 +1,60 @@
+ru:
+  more: 'далее..'
+  next: 'Следующая'
+  end: 'Последняя'
+  name: 'Название'
+  description: 'Описание'
+  picture: 'Изображение'
+  save: 'Сохранить'
+  delete: 'Удалить'
+  add: 'Добавить'
+  edit: 'Редактировать'
+  destroy: 'Удалить'
+  remove: 'Удалить'
+  sign_in: 'Вход'
+  sign_up: 'Регистрация'
+  sign_out: 'Выход'
+  email: 'Email'
+  password: 'Пароль'
+  password_confirmation: 'Подтверждение'
+  title: 'Заголовок'
+  can_not_save: "Ошибка! Контент не может быть сохранён!"
+  first: 'Первая'
+  last: 'Последняя'
+  prev_page: 'Предыдущая'
+  next_page: 'Следующая'
+  all: 'Все'
+  are_you_sure: 'Вы уверены?'
+  type: 'Тип'
+
+
+  errors:
+    messages:
+      not_saved: 'Cохранение не удалось, исправьте ошибки!'
+      record_invalid: ! 'Не прошли валидацию: Поле %{errors}'
+
+
+  states:
+    imported: 'Импортирован'
+    not_imported: 'Не импортирован'
+    importing: 'Импортируется'
+    loading: 'Загружается'
+    import_to_db: 'Импортировать продукты'
+    start_import: 'Загрузить файл в базу'
+
+  activerecord:
+    errors:
+      models:
+        autopart:
+          attributes:
+            count:
+              blank: 'не должно быть пустым!'
+        user:
+          attributes:
+            email:
+              taken: 'уже занят'
+              invalid: 'неверный формат'
+            password:
+              blank: 'поле не должно быть пустым!'
+            password_confirmation:
+              confirmation: 'поле не должно быть пустым!'

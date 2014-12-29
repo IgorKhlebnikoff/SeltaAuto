@@ -1,0 +1,19 @@
+.wrap
+  h2= t('.oils')
+  - if current_user && current_user.is_admin?
+    p= link_to t('.imports'), imports_path
+  .autoparts-list
+    - if @oils.any?
+      table#oils_table
+        thead
+          tr
+            th= t('.name')
+            th= t('.sae')
+            th= t('.specification')
+            th= t('.description')
+            th= t('.count')
+            th= t('.price')
+        tbody
+          = render partial: 'oil', collection: @oils
+    - else
+      p= t('.no_oils')

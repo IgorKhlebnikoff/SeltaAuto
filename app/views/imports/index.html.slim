@@ -1,0 +1,19 @@
+.wrap
+  h2
+    = t('.imports')
+    = link_to "(#{t('.new_import')})", new_import_path, class: 'add-content'
+  - if @imports.any?
+    .imports-list
+      table
+        tr
+          th= t('.created_at')
+          th= t('type')
+          th= t('.filename')
+          th= t('.parts_count')
+          th= t('.new_parts')
+          th= t('.found_count')
+          th= t('.state')
+          th= t('.actions')
+        = render partial: 'import', collection: @imports
+  - else
+    p= t('.no_imports')

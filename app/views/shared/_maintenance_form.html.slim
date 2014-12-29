@@ -1,0 +1,24 @@
+= link_to t('.inspection_request'), '#', id: 'show_maintenance_form', class: 'btn btn-maintenance'
+
+#maintenance_form.maintenance_aside.active ng-controller="InspectionRequestsController"
+  a#close_maintenance_form.close href="#" = fa_icon 'times'
+  h3= t '.inspection_request'
+
+  form name="mf" ng-submit="sendRequest()"
+    = label_tag 'first_name', t('.first_name')
+    = text_field_tag :first_name, nil, class: 'form-control', required: true, ng_model: 'first_name'
+    .form-text-error ng-show="mf.first_name.$error.required && mf.first_name.$dirty" Поле не заполнено
+
+    = label_tag 'last_name', t('.last_name')
+    = text_field_tag :last_name, nil, class: 'form-control', required: true, ng_model: 'last_name'
+    .form-text-error ng-show="mf.last_name.$error.required && mf.last_name.$dirty" Поле не заполнено
+
+    = label_tag 'phone', t('.phone')
+    = text_field_tag :phone_number, nil, class: 'form-control', required: true, ng_model: 'phone_number'
+    .form-text-error ng-show="mf.phone_number.$error.required && mf.phone_number.$dirty" Поле не заполнено
+
+    = label_tag 'comment', t('.comment')
+    = text_area_tag :comment, nil, class: 'form-control', required: true, ng_model: 'comment'
+    .form-text-error ng-show="mf.comment.$error.required && mf.comment.$dirty" Поле не заполнено
+
+    input type="submit" value="#{t('.send_request')}" class="btn" ng-disabled="mf.$invalid"

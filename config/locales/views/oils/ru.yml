@@ -1,0 +1,12 @@
+ru:
+  oils:
+    index:
+      oils: 'Масла'
+      imports: 'Импорты'
+      name: 'Наименование'
+      sae: 'SAE'
+      price: 'Цена'
+      count: 'Колличество на складе, литров'
+      specification: 'Спецификации и допуски'
+      description: 'Краткое описание'
+      no_oils: 'Нет масел'

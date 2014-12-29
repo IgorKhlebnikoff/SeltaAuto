@@ -1,0 +1,1 @@
+(function(){var n;n=angular.module("config",[]),n.config(function(n,a){var t;return t=$('meta[name="csrf-token"]').attr("content"),a.defaults.headers.common["X-CSRF-TOKEN"]=t,a.defaults.headers.common.Accept="application/json"})}).call(this);

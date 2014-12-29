@@ -1,0 +1,30 @@
+en:
+  shared:
+    content_form:
+      category: 'Category'
+    maintenance_form:
+      inspection_request: 'Inspection Request'
+      first_name: 'First Name*'
+      last_name: 'Last Name*'
+      phone: 'Phone*'
+      service_type: 'Service Type'
+      comment: 'Comment*'
+      send_request: 'Send'
+    footer:
+      main: 'Main'
+      last_news: 'Last News'
+      gallery: 'Gallery'
+      services: 'Services'
+      contact_us: 'Contact us'
+    navigation:
+      main: 'Main'
+      services: 'Services'
+      autoparts: 'Catalog'
+      parts: 'Autoparts'
+      oils: 'Oils'
+      news: 'News'
+      gallery: 'Gallery'
+      forums: 'Forums'
+      contacts: 'Contacts'
+    header:
+      inspection_requests: "Inspection Requests (%{count})"

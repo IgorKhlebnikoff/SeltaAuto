@@ -1,0 +1,8 @@
+en:
+  certificates:
+    new:
+      add_certificate: 'Add Certificate'
+    index:
+      certificates: 'Certificates'
+    edit:
+      edit_certificate: 'Add Certificate'

@@ -1,0 +1,25 @@
+.wrap
+  .news-list
+    h2
+      = t('.news')
+      = link_to "(#{t('.add_new_article')})", new_news_path, class: 'add-content' if current_user.try(:is_admin?)
+
+    - @news.each do |article|
+      .news-item
+        = link_to image_tag(article.picture(:logo)), news_path(article)
+
+        .news-introtext
+          h3 = link_to article.name, news_path(article)
+
+          ul.news-item-info
+            li = fa_icon 'calendar', text: article.created_at.strftime('%d.%m.%Y')
+            li = fa_icon 'user', text: article.user.full_name
+            li = fa_icon 'comment', text: article.comments_count
+
+          div.desc= article.description.truncate(180).html_safe
+
+          = link_to t('more'), news_path(article), class: 'more'
+
+    = paginate @news
+
+  .news-right = render 'aside'

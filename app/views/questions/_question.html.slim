@@ -1,0 +1,12 @@
+.questions-item
+  .questions-introtext
+    h3 = link_to question.title, question_path(question)
+
+    ul.questions-item-info
+      li = fa_icon 'calendar', text: question.created_at.tidy_date
+      li = fa_icon 'user', text: question.user.full_name
+      li = fa_icon 'comment', text: question.answers_count
+
+    p.desc= question.body.html_safe.truncate(100)
+
+    = link_to t('more'), question_path(question), class: 'more'

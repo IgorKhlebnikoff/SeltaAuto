@@ -1,0 +1,13 @@
+h2
+  strong Новая заявка на ТО от:
+= @inspection_request.full_name
+br
+p
+  strong Контактный телефон:
+= @inspection_request.phone_number
+br
+p
+  strong Комментарий:
+= @inspection_request.comment
+br
+p= link_to 'Перейти к заявкам', inspection_requests_url

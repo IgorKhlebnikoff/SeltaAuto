@@ -1,0 +1,14 @@
+= form_for @photo, :html => { multipart: true } do |f|
+  - if @photo.errors.any?
+    div
+      h2 = "#{pluralize(@gallery.errors.count, "error")} prohibited this gallery from being saved:"
+      ul
+        - @photo.errors.full_messages.each do |message|
+          li = message
+  div
+    = f.label :picture, t('picture')
+    = f.file_field :asset, class: 'form-control'
+  div
+    = f.submit 'Save', class: 'btn'
+
+img src="#{@photo.asset.url(:logo)}"

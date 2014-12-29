@@ -1,0 +1,10 @@
+ru:
+  questions:
+    index:
+      questions: 'Вопросы'
+      add_new_question: 'Задать вопрос'
+    new:
+      category: 'Категория'
+      question: 'Вопрос'
+    categories:
+      categories: 'Категории'

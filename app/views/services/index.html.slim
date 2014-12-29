@@ -1,0 +1,9 @@
+.wrap
+  h2
+    = t('.services')
+    = link_to "(#{t('add')})", new_service_path, class: 'add-content' if current_user.try(:is_admin?)
+
+  .services-list
+    - ids = ['#engine', '#running_gear', '#fuel_system', '#brake_system', '#services_electricy']
+    - @services.each_with_index do |service, index|
+      = render partial: 'service', locals: { service: service, id: ids[index], position_class: cycle('pull-left', 'pull-right') }

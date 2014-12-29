@@ -1,0 +1,81 @@
+// Certificates
+@import 'mixins';
+@import 'compass/css3/opacity';
+@import 'compass/css3/transition';
+
+
+.certificates-list{
+  margin-left: 3%;
+  @include clearfix;
+
+
+}
+.certificates-item{
+  width: 18%;
+  position: relative;
+  float: left;
+  margin-left: 2%;
+  margin-top: 1%;
+  height: 170px;
+}
+
+.certificates-photo {
+  width: 60%;
+  height: 170px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+
+  > a {
+    width: 60%;
+    background: rgba(255,255,255,.75);
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    font-size: 30px;
+    @include opacity(0);
+    @include transition(.15s);
+    &:hover {
+      width: 60%;
+    }
+
+    i {
+      width: 60%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  // show buttons action
+  &:hover {
+    > a, .certificates-action { @include opacity(1); }
+  }
+}
+.certificates-action {
+  width: 60%;
+  font-size: 26px;
+  position: relative;
+  z-index: 5;
+  top: 2px;
+  left: 0;
+  @include opacity(0);
+  @include transition(.15s);
+
+
+  .icons {
+    position: relative;
+    right: 0;
+    top: 1px;
+
+  }
+}

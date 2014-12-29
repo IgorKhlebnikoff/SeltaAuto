@@ -1,0 +1,37 @@
+// Basic style
+@import 'compass/css3/box-sizing';
+@import 'compass/css3/transition';
+@import "mixins";
+
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+:focus {
+  outline: 0 !important;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: #f8f8f8 image-url('bg.png') 0 0 repeat;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 13px;
+  line-height: 1;
+  min-height: 100%;
+  padding-bottom: 100px;
+  position: relative;
+  @include clearfix;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  @include transition(color .2s ease);
+
+  &:hover { color: #858585; }
+}

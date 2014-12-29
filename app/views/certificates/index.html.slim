@@ -1,0 +1,14 @@
+.wrap
+  .photos
+    h2
+      = t('.certificates')
+      = link_to "(#{t('add')})", new_certificate_path, class: 'add-content' if current_user.try(:is_admin?)
+
+    .certificates-list
+      - @photos.each do |photo|
+        .certificates-item
+          .certificates-photo style="background-image: url(#{photo.asset.url(:logo)})"
+            = link_to fa_icon('search-plus'), photo.asset.url(:original), data: { lightbox: 'certificates' }
+            .certificates-action = link_to fa_icon('trash-o'), photo, data: { confirm: t('are_you_sure')}, method: :delete if current_user.try(:is_admin?)
+
+            .certificates-action = link_to fa_icon('pencil-square-o'), edit_certificate_path(photo), class: 'icons', data: { confirm: t('are_you_sure')}, method: :get if current_user.try(:is_admin?)

@@ -1,0 +1,20 @@
+.wrap
+  h2= t('.autoparts')
+  - if current_user && current_user.is_admin?
+    p= link_to t('.imports'), imports_path
+  .autoparts-list
+    - if @autoparts.any?
+      table#autoparts_table
+        thead
+          tr
+            th= t('.part_number')
+            th= t('.made_by')
+            th= t('.car_brand')
+            th= t('.model')
+            th= t('.name')
+            th= t('.count')
+            th= t('.price')
+        tbody
+          = render partial: 'autopart', collection: @autoparts
+    - else
+      p= t('.no_parts')

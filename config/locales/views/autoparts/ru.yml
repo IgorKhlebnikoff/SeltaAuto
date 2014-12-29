@@ -1,0 +1,13 @@
+ru:
+  autoparts:
+    index:
+      autoparts: 'Каталог запчастей'
+      imports: 'Импорты'
+      part_number: 'Номер запчасти'
+      made_by: 'Фирма производитель'
+      car_brand: 'Марка авто'
+      model: 'Модель'
+      name: 'Наименование запчасти'
+      count: 'кол-во'
+      price: 'Цена продажи, грн'
+      no_parts: 'Нет запчастей'

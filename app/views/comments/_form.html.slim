@@ -1,0 +1,7 @@
+.form.comments-form
+  form name="formAddComment" ng-submit="sendComment()" novalidate=""
+    = label_tag 'body', t('.body')
+    = text_area :body, nil, class: 'form-control', required: true, 'ng-model' => 'body', name: 'body'
+    .form-text-error ng-show="formAddComment.body.$error.required && formAddComment.body.$dirty" Поле не заполнено
+
+    input type="submit" value="#{t('.send_comment')}" class="btn" ng-disabled="formAddComment.$invalid"

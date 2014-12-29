@@ -1,0 +1,8 @@
+section id="#{id}"
+  h1
+    = service.name
+    = link_to "(#{t('edit')})", edit_service_path(service), class: 'add-content' if current_user.try(:is_admin?)
+    = link_to "(#{t('remove')})", service_path(service), method: 'DELETE', class: 'add-content' if current_user.try(:is_admin?)
+
+  = image_tag service.picture(:logo), class: position_class
+  p= service.description.html_safe

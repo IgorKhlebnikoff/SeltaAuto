@@ -1,0 +1,63 @@
+@import "compass/css3";
+//@import "compass/css3/opacity";
+//@import 'compass/css3/transition';
+//@import 'compass/css3/border-radius';
+@import "mixins";
+
+// Icons FontAwesome
+@import "font-awesome";
+
+// Fonts
+@import "ui/fonts";
+
+// Refresh all style
+@import "ui/normalize";
+
+// UI Components
+@import "ui/basic";
+@import "ui/helpers";
+@import "ui/wrapper";
+@import "ui/forms";
+@import "ui/buttons";
+@import "ui/alerts";
+@import "ui/paginations";
+@import "ui/tooltip";
+@import "ui/links";
+@import "ui/lightbox";
+
+@import "ui/header";
+@import "ui/navigation";
+@import "ui/slider";
+@import "ui/maintenance_form";
+@import "ui/footer";
+
+// Pages style
+@import "pages/home";
+@import "pages/news";
+@import "pages/contacts";
+@import "pages/maintenance";
+@import "pages/services";
+@import "pages/photos";
+@import "pages/questions";
+@import "pages/answers";
+@import "pages/comments";
+@import "pages/sign_in";
+@import "pages/sign_up";
+@import "pages/autoparts";
+@import "pages/imports";
+@import "pages/header";
+@import "pages/inspection_requests";
+@import "pages/certificates";
+
+// Page elements
+@import "forms";
+
+// ngDialog
+@import "ng_dialog";
+@import "ng_dialog_theme_default";
+
+@import 'dataTables/jquery.dataTables';
+
+.translation_missing {
+  outline: 2px solid red;
+}

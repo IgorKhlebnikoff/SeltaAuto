@@ -1,0 +1,6 @@
+= form_for @inspection_request do |f|
+  = f.text_field :first_name
+  = f.text_field :last_name
+  = f.text_field :phone_number
+  = recaptcha_tags ajax: true
+  = f.submit 'Send the request'

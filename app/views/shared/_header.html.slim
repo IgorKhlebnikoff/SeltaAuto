@@ -1,0 +1,24 @@
+header#header
+  .wrap
+    = link_to image_tag('logo-v.png'), '/', class: 'logo'
+
+    .sign_links ng-controller='InspectionRequestsController'
+      - if current_user
+        - if current_user.is_admin?
+          = inspection_requests_link
+        = link_to t('sign_out'), destroy_user_session_path, method: 'DELETE'
+      - else
+        = link_to t('sign_in'), user_session_path
+        = link_to t('sign_up'), new_user_registration_path
+
+    .social
+      = link_to fa_icon('twitter-square')
+      = link_to fa_icon('facebook-square')
+      = link_to fa_icon('google-plus-square')
+      = link_to 'RU', url_for(locale: 'ru')
+      = link_to 'EN', url_for(locale: 'en')
+
+    .search
+      = form_tag '/search'
+        = text_field_tag 'search', nil, class: 'form-control'
+        = button_tag fa_icon('search'), class: 'btn-search'

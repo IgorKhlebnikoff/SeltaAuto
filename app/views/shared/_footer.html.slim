@@ -1,0 +1,12 @@
+footer#footer
+  .wrap
+    span
+      | 2014 &copy;
+      = link_to 'Privacy Policy', '#'
+
+    ul
+      li = link_to t('.main'), root_path
+      li = link_to t('.services'), services_path
+      li = link_to t('.last_news'), news_index_path
+      li = link_to t('.gallery'), photos_path
+      li = link_to t('.contact_us'), contacts_path

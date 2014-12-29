@@ -1,0 +1,13 @@
+// Links
+
+.add-content {
+  margin-left: 5px;
+  font-size: 16px;
+  color: #666;
+  text-decoration: underline;
+  text-transform: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

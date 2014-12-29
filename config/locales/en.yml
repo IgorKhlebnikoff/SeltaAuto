@@ -1,0 +1,58 @@
+en:
+  more: 'More..'
+  next: 'Next'
+  end: 'End'
+  name: 'Name'
+  description: 'Description'
+  picture: 'Picture'
+  save: 'Save'
+  delete: 'Delete'
+  add: 'Add'
+  edit: 'Edit'
+  destroy: 'Destroy'
+  remove: 'Remove'
+  sign_in: 'Sign In'
+  sign_up: 'Sign Up'
+  sign_out: 'Sign Out'
+  email: 'Email'
+  password: 'Password'
+  password_confirmation: 'Password Confirmation'
+  title: 'Title'
+  can_not_save: "Error! Content can't be saved.."
+  first: 'First'
+  last: 'Last'
+  prev_page: 'Previous'
+  next_page: 'Next'
+  all: 'All'
+  are_you_sure: 'Are you sure?'
+  type: 'Type'
+
+  errors:
+    messages:
+      not_saved: 'Can be saved!'
+      record_invalid: ! 'Validation failed: %{errors}'
+
+  states:
+    imported: 'Imported'
+    not_imported: 'Not Imported'
+    importing: 'In progress'
+    loading: 'Loading'
+    import_to_db: 'Import products'
+    start_import: 'Load file to DB'
+
+  activerecord:
+    errors:
+      models:
+        autopart:
+          attributes:
+            count:
+              blank: 'can not be blank'
+        user:
+          attributes:
+            email:
+              taken: 'already been taken!'
+              invalid: 'Wrong format'
+            password:
+              blank: 'can not be blank!'
+            password_confirmation:
+              confirmation: 'can not be blank!'

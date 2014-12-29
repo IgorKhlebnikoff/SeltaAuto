@@ -1,0 +1,9 @@
+ru:
+  contacts:
+    index:
+      address: 'Адрес:'
+      full_address: 'Черкассы, Рускополянский проезд, 10'
+      phone: 'Телефон:'
+      email: 'Email:'
+      how_to_find: 'Как добраться:'
+

@@ -1,0 +1,25 @@
+.wrap ng-init="importId=#{@import.id}"
+  .import ng-controller='ImportsController'
+    - present @import do |import_presenter|
+      h2= @import.file_file_name
+      p= import_presenter.state
+      - if @import.headers.any?
+        .headers
+          h3= t('.headers')
+          .container
+            ul
+              - @import.headers.each_with_index do |import_column|
+                li= import_column
+
+        .columns
+          h3
+            = t('.necessary_columns')
+            = link_to "(#{t('edit')})", 'javascript: void(false)', class: 'edit-columns', 'ng-click' => 'ImportsController.necessaryColumns'
+          .container
+            - if @import.necessary_columns.any?
+              ul
+                - @import.necessary_columns.each_with_index do |import_column|
+                  li= import_column
+            - else
+              = t('all')
+        .clearfix

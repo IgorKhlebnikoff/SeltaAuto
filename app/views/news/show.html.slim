@@ -1,0 +1,35 @@
+.wrap ng-init="newsId=#{@article.id}"
+  .news-list
+    .full-news
+      h3= @article.name
+
+      ul.news-item-info
+        li = fa_icon 'calendar', text: @article.created_at.strftime('%d.%m.%Y')
+        li = fa_icon 'user', text: @article.user.full_name
+        li = fa_icon 'comment', text: @article.comments_count
+
+      = image_tag @article.picture
+
+      .full-text= @article.description.html_safe
+
+  .comments-list ng-controller="CommentsController"
+    - if @article.comments_count > 0
+      .comments-item ng-repeat="comment in comments | startFrom:currentPage*pageSize | limitTo:pageSize"
+        .comments-introtext
+          ul.comments-item-info
+            li = fa_icon 'calendar', text: "{{comment.created_at | date:'dd/MM/yyyy, hh:mm a'}}"
+            li = fa_icon 'user', text: "{{comment.author}}"
+          p.desc {{comment.body}}
+
+      ul.pagination
+        li: button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"
+          = t('prev_page')
+        li {{currentPage+1}}/{{numberOfPages()}}
+        li: button ng-disabled="currentPage >= data.length/pageSize-1" ng-click="currentPage=currentPage+1"
+          = t('next_page')
+      br
+
+    - if current_user
+      = render partial: '/comments/form'
+
+  -# .news-right = render 'aside'

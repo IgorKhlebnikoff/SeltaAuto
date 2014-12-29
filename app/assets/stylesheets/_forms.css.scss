@@ -1,0 +1,36 @@
+.form-area {
+  padding: 20px;
+  margin-bottom: 20px;
+  background: white;
+
+  @media (min-width: 700px) {
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 400px;
+  }
+}
+
+.form {
+  label {
+    margin-bottom: 3px;
+    display: inline-block;
+    font-size: 14px;
+  }
+
+  textarea {
+    height: 200px;
+  }
+
+  .mce-tinymce,
+  .form-control {
+    margin-bottom: 15px;
+  }
+
+  .errors {
+    ul {
+      margin-bottom: 20px;
+      list-style-type: none;
+      color: red;
+    }
+  }
+}

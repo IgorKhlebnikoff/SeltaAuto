@@ -1,0 +1,22 @@
+default: &defaults
+  user: vzl
+  password: password
+  adapter: postgresql
+  host: localhost
+  min_messages: WARNING
+
+development:
+  <<: *defaults
+  database: seltaauto_development
+
+test:
+  <<: *defaults
+  database: seltaauto_test
+
+production:
+  <<: *defaults
+  database: seltaauto_production
+
+staging:
+  <<: *defaults
+  database: seltaauto_staging

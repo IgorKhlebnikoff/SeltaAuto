@@ -1,0 +1,13 @@
+en:
+  autoparts:
+    index:
+      autoparts: 'Catalog'
+      imports: 'Imports'
+      part_number: 'Part Number'
+      made_by: 'Made By'
+      car_brand: 'Car Brand'
+      model: 'Model'
+      name: 'Name'
+      count: 'Count'
+      price: 'Price'
+      no_parts: 'No parts'

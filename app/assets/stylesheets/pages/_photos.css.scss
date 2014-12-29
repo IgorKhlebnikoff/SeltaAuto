@@ -1,0 +1,110 @@
+// Photos
+@import 'mixins';
+@import 'compass/css3/opacity';
+@import 'compass/css3/transition';
+
+.photos {
+  h2 {
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .photos-list {
+    margin-left: -2%;
+    margin-top: -2%;
+    @include clearfix;
+  }
+
+  .photo-item {
+    position: relative;
+    float: left;
+    width: 48%;
+    margin-left: 2%;
+    margin-top: 2%;
+    height: 170px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+    > a {
+      background: rgba(255,255,255,.75);
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      font-size: 30px;
+      @include opacity(0);
+      @include transition(.15s);
+      color: #858585;
+      &:hover { color: #000; }
+
+      i {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    // show buttons action
+    &:hover {
+      > a, .photo-action { @include opacity(1); }
+    }
+  }
+
+  .photo-action {
+    font-size: 26px;
+    position: absolute;
+    z-index: 5;
+    top: 10px;
+    right: 10px;
+    @include opacity(0);
+    @include transition(.15s);
+
+    a { margin-left: 10px;}
+      .icons {
+        right: 25px;
+        position: absolute;
+        top: 1px;
+      }
+  }
+
+  .btn + .btn { margin-left: 10px; }
+
+  // Responsive
+  @media (min-width: 700px) {
+    .photo-item {
+      width: 31.3333%;
+      height: 200px;
+    }
+  }
+}
+
+.photos-add {
+  h2 {
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  div {
+    + div { padding-top: 20px; }
+  }
+
+  label {
+    margin-bottom: 3px;
+    display: inline-block;
+    font-size: 14px;
+  }
+}
+

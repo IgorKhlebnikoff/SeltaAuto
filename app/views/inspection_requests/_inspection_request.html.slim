@@ -1,0 +1,9 @@
+tr ng-class="{'new-request': !request.viewed}" ng-repeat='request in requests.collection'
+  td ng-click="showDetails(request.id, $index)" {{request.created_at | date:'dd/MM/yyyy'}}
+  td ng-click="showDetails(request.id, $index)" {{request.full_name}}
+  td ng-click="showDetails(request.id, $index)" {{request.phone_number}}
+  td ng-click="showDetails(request.id, $index)" {{request.comment}}
+  td ng-click="showDetails(request.id, $index)" {{request.viewed_by}}
+  td
+    a href='inspection_requests/{{request.id}}' data-method='delete' data-confirm="#{t('are_you_sure')}"
+      = t('delete')

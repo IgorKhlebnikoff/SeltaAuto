@@ -1,0 +1,9 @@
+en:
+  contacts:
+    index:
+      address: 'Address:'
+      full_address: 'Cherkassy, Russkopolianskiy proezd, 10'
+      phone: 'Phone:'
+      email: 'Email:'
+      how_to_find: 'How to find:'
+

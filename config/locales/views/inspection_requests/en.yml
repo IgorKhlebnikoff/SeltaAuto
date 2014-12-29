@@ -1,0 +1,10 @@
+en:
+  inspection_requests:
+    index:
+      inspection_requests: 'Inspection Requests'
+      created_at: 'Created at'
+      name: 'Nmae'
+      phone_number: 'Phone'
+      comment: 'Comment'
+      viewed_by: 'Viewed By'
+      no_requests: 'No Requests'

@@ -1,0 +1,26 @@
+.wrap
+  .contacts
+    ul.contact-info
+      li
+        h1= t('.address')
+        = fa_icon 'home'
+        = t('.full_address')
+      li
+        h1= t('.phone')
+        = fa_icon 'phone'
+        | (0472) 66-07-91
+        br
+        | (067) 470-95-71
+        br
+        | (050) 447-01-16
+      li
+        h1= t('.email')
+        = fa_icon 'envelope'
+        = mail_to 'selta_auto@2upost.com'
+
+    h1= t('.how_to_find')
+    #map_canvas.contact-map
+
+    img.map-image src="http://maps.googleapis.com/maps/api/staticmap?center=49.44149,32.013275&zoom=15&size=600x300&markers=label:%7C49.44149,32.01327&sensor=false"
+
+= javascript_include_tag 'https://maps.googleapis.com/maps/api/js'

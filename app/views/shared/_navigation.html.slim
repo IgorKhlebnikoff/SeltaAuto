@@ -1,0 +1,17 @@
+.wrap
+  nav#navigation
+    ul
+      li = link_to t('.main'), root_path
+      li = link_to t('.services'), services_path
+      li: span
+        = link_to t('.autoparts'), autoparts_path
+        ul
+          li = link_to t('.parts'), autoparts_path
+          li = link_to t('.oils'), oils_path
+      li = link_to t('.news'), news_index_path
+      li: span
+        = link_to t('.gallery'), photos_path
+        ul
+          li = link_to t('.certificates'), certificates_path
+      li = link_to t('.forums'), questions_path
+      li = link_to t('.contacts'), contacts_path, data: { no_turbolink: true }

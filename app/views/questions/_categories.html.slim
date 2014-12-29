@@ -1,0 +1,8 @@
+.categories
+  h3
+    = t('.categories')
+    = link_to "(#{t('add')})", new_category_path, class: 'add-content' if current_user.try(:is_admin?)
+
+  ul
+    - @categories.each do |category|
+      li = link_to category.name, questions_path(filter_by: { category_id: category.id })

@@ -1,0 +1,44 @@
+.imports-list {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+
+  table {
+    border-collapse: collapse;
+    border: 1px solid grey;
+    text-align: center;
+    width: 100%;
+
+    th {
+      padding: 5px;
+      border: 1px solid grey;
+    }
+
+    td {
+      padding: 5px;
+      width: 20%;
+      border: 1px solid grey;
+    }
+  }
+}
+
+.import {
+  padding: 20px;
+  background: white;
+
+  .headers, .columns {
+    float: left;
+    margin: 10px;
+    padding: 10px;
+
+    .container {
+      max-height: 200px;
+      text-overflow: ellipsis;
+      overflow: scroll;
+    }
+
+    .edit-columns {
+      margin-left: 10px;
+    }
+  }
+}

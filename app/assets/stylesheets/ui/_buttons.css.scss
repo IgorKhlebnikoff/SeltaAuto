@@ -1,0 +1,46 @@
+// Buttons
+@import 'compass/css3/transition';
+@import 'compass/css3/opacity';
+@import 'mixins';
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-family: 'PT Sans';
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #858585;
+  background-image: none;
+  color: white;
+  border: 0 solid transparent;
+  white-space: nowrap;
+  padding: 9px 20px;
+  font-size: 14px;
+  line-height: 1;
+  text-decoration: none !important;
+  @include user-select(none);
+  @include transition(all .2s ease);
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background: black;
+    color: white;
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    border-color: transparent !important;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+    pointer-events: none; // Future-proof disabling of clicks
+    @include opacity(.60);
+  }
+}

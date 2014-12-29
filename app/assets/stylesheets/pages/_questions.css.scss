@@ -1,0 +1,170 @@
+@import 'mixins';
+.questions-list {
+  padding: 30px 0 23px;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  img {
+    float: left;
+    margin-right: 10px;
+    max-width: 100%;
+  }
+
+  .questions-item {
+    background: white;
+    border: 1px solid #ededed;
+    padding: 10px;
+    margin-bottom: 20px;
+    @include clearfix;
+  }
+
+  .questions-introtext {
+    display: table;
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .questions-item-info {
+    list-style: none;
+    margin-bottom: 10px;
+
+    li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+  }
+
+  .desc {
+    color: #858585;
+    margin: 0 0 7px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .more {
+    color: white;
+    padding: 1px 5px;
+    font-size: 13px;
+    border-radius: 5px;
+    background-color: #858585;
+
+    &:hover { background-color: #DB0707; }
+  }
+
+  .full-questions {
+    h3 {
+      margin: 0 0 7px;
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    > img { width: 100%; }
+  }
+
+  .full-text {
+    background: white;
+    border: 1px solid #ededed;
+    padding: 0 15px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #858585;
+    clear: both;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 20px;
+
+    @media (min-width: 700px) {
+      width: 200px;
+    }
+  }
+
+  // Responsive
+  @media (min-width: 700px) {
+    float: left;
+    width: 76%;
+
+    .questions-introtext {
+      width: auto;
+      padding-top: 0;
+    }
+  }
+}
+
+.categories-right {
+  padding: 30px 0 0;
+
+  h3 {
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style: none;
+    background: white;
+    border: 1px solid #ededed;
+    padding: 11px 15px;
+    margin-bottom: 30px;
+  }
+
+  li {
+    padding: 4px 0;
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+
+  @media (min-width: 700px) {
+    float: right;
+    width: 22%;
+  }
+}
+
+.questions-add {
+  h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+}
+
+.questions-form {
+  margin: 20px 0;
+
+  label {
+    margin-bottom: 3px;
+    display: inline-block;
+    font-size: 14px;
+  }
+
+  textarea {
+    height: 200px;
+  }
+
+  .mce-tinymce,
+  .form-control {
+    margin-bottom: 15px;
+  }
+}
+

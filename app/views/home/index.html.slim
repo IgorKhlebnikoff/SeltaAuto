@@ -1,0 +1,52 @@
+section.home-type-services
+  .wrap
+    .home-services-list
+      - @services.each do |service|
+        .home-service-item
+          h3= service.name
+          span= image_tag service.picture(:logo)
+          .introtext
+            p= strip_tags(service.description).truncate(107)
+            = link_to t('more'), services_path(anchor: 'engine'), class: 'more'
+
+.wrap
+  section.certificates
+    .wrap
+      h3
+        = t('.certificates')
+        = link_to "(#{t('add')})", new_certificate_path, class: 'add-content' if current_user.try(:is_admin?)
+
+      .certificate-desc
+        = t('.certificates')
+
+      ul.certificates-list
+        = render partial: 'certificate', collection: @certificates
+
+  section.home-latest-news
+    .wrap
+      h3
+        = t('.news')
+        = link_to "(#{t('add')})", new_news_path, class: 'add-content' if current_user.try(:is_admin?)
+
+      ul
+        - @news.each do |news|
+          li
+            .date= news.created_at.strftime('%d.%m.%Y')
+            = link_to news.name, news_path(news), class: 'title'
+            span= strip_tags news.description.truncate(100)
+            = link_to t('more'), news_path(news), class: 'more'
+
+  section.home-about-us
+    .wrap
+      h3
+        = t('.our_partners')
+        = link_to "(#{t('add')})", new_partner_path, class: 'add-content' if current_user.try(:is_admin?)
+
+      .home-about-desc
+        = t('.partners')
+        p
+          = t('.wants_to_be_partner')
+          = mail_to 'selta_auto@2upost.com'
+
+      ul.partners-list
+        = render partial: 'partner', collection: @partners

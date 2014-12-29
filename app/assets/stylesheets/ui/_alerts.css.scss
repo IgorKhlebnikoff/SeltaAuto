@@ -1,0 +1,26 @@
+// Alerts
+@import 'compass/css3/border-radius';
+
+.alert {
+  position: relative;
+  padding: 9px 10px;
+  font-size: 12px;
+  @include border-radius(5px);
+
+  p {
+    margin: 0 0 10px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  // Types alerts
+  &.alert-info {
+    border: 1px dashed #3a9bd2;
+  }
+
+  &.alert-warning {
+    background: #f7f8f9;
+  }
+}

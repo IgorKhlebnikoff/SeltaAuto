@@ -1,0 +1,33 @@
+.wrap ng-init="questionId=#{@question.id}"
+  .categories-right= render 'categories'
+
+  .questions-list
+    .questions-item
+      .questions-introtext
+        h3 = link_to @question.title, question_path(@question)
+
+        ul.questions-item-info
+          li = fa_icon 'calendar', text: @question.created_at.tidy_date
+          li = fa_icon 'user', text: @question.user.full_name
+          li = fa_icon 'comment', text: @question.answers_count
+
+        p.desc= @question.body.html_safe
+  .answers-list ng-controller="AnswersController"
+    - if @question.answers_count > 0
+      .answers-item ng-repeat="answer in answers | startFrom:currentPage*pageSize | limitTo:pageSize"
+        .answers-introtext
+          ul.answers-item-info
+            li = fa_icon 'calendar', text: "{{answer.created_at | date:'dd/MM/yyyy, hh:mm a'}}"
+            li = fa_icon 'user', text: "{{answer.author}}"
+          p.desc {{answer.body}}
+
+      ul.pagination
+        li: button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"
+          = t('prev_page')
+        li {{currentPage+1}}/{{numberOfPages()}}
+        li: button ng-disabled="currentPage >= data.length/pageSize-1" ng-click="currentPage=currentPage+1"
+          = t('next_page')
+      br
+
+    - if current_user
+      = render partial: '/answers/form'

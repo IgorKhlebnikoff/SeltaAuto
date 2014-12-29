@@ -1,0 +1,105 @@
+// Maintenance form aside
+@import 'compass/css3/box-shadow';
+@import 'compass/css3/transform';
+
+.maintenance_aside {
+  padding: 15px 20px;
+  background: white;
+  border: 1px solid #ededed;
+  display: block;
+  margin-bottom: -18px;
+
+  h3 {
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  form {
+  }
+
+  label {
+    margin-bottom: 3px;
+    display: inline-block;
+  }
+
+  input,
+  textarea {
+    margin-bottom: 15px;
+  }
+
+  textarea {
+    height: 82px;
+  }
+
+  .close {
+    float: right;
+    font-size: 18px;
+    padding: 5px;
+    margin-right: -5px;
+    display: none;
+  }
+
+  .labels {
+    margin-bottom: 15px;
+
+    input {
+      margin: 0 7px 0 0;
+    }
+
+    label {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  // Responsive
+  @media (min-width: 700px) {
+    padding: 15px;
+    width: 320px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    z-index: 1000;
+    margin: 0;
+    display: none;
+
+    .close {
+      display: block;
+    }
+  }
+}
+
+// Button show maintenance
+.btn-maintenance {
+  position: fixed;
+  right: -60px;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 150px;
+  height: 32px;
+  margin: auto;
+  padding-left: 0;
+  padding-right: 0;
+  display: none;
+  background: #004a99;
+  @include box-shadow(0 0 5px rgba(0,0,0,.5));
+  @include rotate(-90deg);
+
+  &:hover {
+    color: white;
+  }
+
+  // Responsive
+  @media (min-width: 700px) {
+    display: block;
+  }
+}

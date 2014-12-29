@@ -1,0 +1,33 @@
+// Helper classes
+@import 'mixins';
+
+// Clear Fix
+.clearfix {
+  @include clearfix;
+}
+
+// Pull classes
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+// Text aligns
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}

@@ -1,0 +1,3 @@
+class Certificate < Photo
+
+end

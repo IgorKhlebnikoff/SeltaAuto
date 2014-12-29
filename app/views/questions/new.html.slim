@@ -1,0 +1,14 @@
+.wrap
+  .questions-form
+    = form_for @question do |f|
+      div
+        = f.label :category_id, t('.category')
+        = f.select :category_id, Category.all.map { |category| [category.name, category.id] }, { include_blank: true }, { class: 'form-control' }
+      div
+        = f.label :title, t('title')
+        = f.text_field :title, class: 'form-control'
+      div
+        = f.label :body, t('.question')
+        = f.text_area :body, class: 'form-control', id: 'add_content'
+      div
+        = f.submit t('save'), class: 'btn'

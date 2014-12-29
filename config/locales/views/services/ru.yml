@@ -1,0 +1,10 @@
+ru:
+  services:
+    index:
+      services: 'Услуги'
+      add_new_service: 'Добавить услугу'
+    new:
+      add_new_service: 'Добавить услугу'
+    edit:
+      edit_service: 'Редактировать услугу'
+

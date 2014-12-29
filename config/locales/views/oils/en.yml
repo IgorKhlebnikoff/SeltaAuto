@@ -1,0 +1,12 @@
+en:
+  oils:
+    index:
+      oils: 'Oils'
+      imports: 'Imports'
+      name: 'Name'
+      sae: 'SAE'
+      price: 'Price'
+      count: 'Count, L'
+      specification: 'Specification'
+      description: 'Short Description'
+      no_oils: 'No Oils'

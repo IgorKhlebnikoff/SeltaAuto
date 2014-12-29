@@ -1,0 +1,15 @@
+.wrap
+  h2= t('.inspection_requests')
+  - if @inspection_requests.any?
+    .requests-list ng-controller='InspectionRequestsController'
+      table
+        tr
+          th= t('.created_at')
+          th= t('.name')
+          th= t('.phone_number')
+          th= t('.comment')
+          th= t('.viewed_by')
+          th
+        = render partial: 'inspection_request'
+  - else
+    p= t('.no_requests')

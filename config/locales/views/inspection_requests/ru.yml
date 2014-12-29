@@ -1,0 +1,10 @@
+ru:
+  inspection_requests:
+    index:
+      inspection_requests: 'Заявки на ТО'
+      created_at: 'Дата подачи заявки'
+      name: 'Имя'
+      phone_number: 'Номер'
+      comment: 'Комментарий'
+      viewed_by: 'Просмотрено'
+      no_requests: 'Нет заявок'

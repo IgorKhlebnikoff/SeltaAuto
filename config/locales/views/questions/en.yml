@@ -1,0 +1,10 @@
+en:
+  questions:
+    index:
+      questions: 'Questions'
+      add_new_question: 'Create Question'
+    new:
+      category: 'Category'
+      question: 'Question'
+    categories:
+      categories: 'Categories'

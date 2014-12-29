@@ -1,0 +1,8 @@
+en:
+  photos:
+    new:
+      add_new_photo: 'Add Picture'
+    index:
+      photos: 'Gallery'
+    edit:
+      edit_photo: 'edit photo'

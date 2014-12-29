@@ -1,0 +1,19 @@
+.categories
+  h3
+    = t('.categories')
+    = link_to "(#{t('add')})", new_category_path, class: 'add-content' if current_user.try(:is_admin?)
+
+  ul
+    - @categories.each do |category|
+      li = link_to category.name, news_index_path(filter_by: { category_id: category.id })
+
+//.archives
+  h3= t('.archives')
+  ul
+    li = link_to 'MARCH, 2012', '#'
+    li = link_to 'APRIL, 2012', '#'
+    li = link_to 'MAY, 2012', '#'
+    li = link_to 'JUNE, 2012', '#'
+    li = link_to 'JULY, 2012', '#'
+    li = link_to 'AUGUST, 2012', '#'
+    li = link_to 'SEPTEMBER, 2012', '#'

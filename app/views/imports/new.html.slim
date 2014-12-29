@@ -1,0 +1,12 @@
+.wrap
+  h2= t('.new_import')
+  .form
+    = form_for @import, url: imports_path, method: :post do |f|
+      div
+        = f.label :type_of_import, t('.type_of_import')
+        = f.select :type_of_import, options_for_select(%w(Autopart Oil)), {}, { class: 'form-control', name: 'import[type_of_import]' }
+      div
+        = f.label :file, t('.file')
+        = f.file_field :file, class: 'form-control', name: 'import[file]'
+      div
+        = f.submit t('save'), class: 'btn'

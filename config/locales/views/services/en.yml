@@ -1,0 +1,10 @@
+en:
+  services:
+    index:
+      services: 'Services'
+      add_new_service: 'Add Service'
+    new:
+      add_new_service: 'Add Service'
+    edit:
+      edit_service: 'Edit service'
+

@@ -1,0 +1,10 @@
+ru:
+  news:
+    index:
+      news: 'Авто новости'
+      add_new_article: 'Добавить статью'
+    new:
+      add_new_article: 'Добавить статью'
+    aside:
+      categories: 'Категории'
+      archives: 'Архив'

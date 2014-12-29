@@ -1,0 +1,19 @@
+.wrap
+  .sign-up
+    .form-area
+      h2= t('sign_up')
+
+      .form
+        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          div.errors= devise_error_messages!
+          div
+            = f.label t('email')
+            = f.email_field :email, class: 'form-control', autofocus: true
+          div
+            = f.label t('password')
+            = f.password_field :password, class: 'form-control', autocomplete: "off"
+          div
+            = f.label t('password_confirmation')
+            = f.password_field :password_confirmation, class: 'form-control', autocomplete: "off"
+          div= f.submit t('sign_up'), class: 'btn btn-primary'
+    .clearfix

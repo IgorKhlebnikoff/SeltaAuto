@@ -1,0 +1,10 @@
+en:
+  news:
+    index:
+      news: 'News'
+      add_new_article: 'Add Article'
+    new:
+      add_new_article: 'Add Article'
+    aside:
+      categories: 'Categories'
+      archives: 'Archives'

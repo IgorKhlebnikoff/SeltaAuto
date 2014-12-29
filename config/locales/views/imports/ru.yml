@@ -1,0 +1,20 @@
+ru:
+  imports:
+    index:
+      imports: 'Импорты'
+      new_import: 'Новый импорт'
+      created_at: 'Создан'
+      filename: 'Имя файла'
+      parts_count: 'Колличество запчастей'
+      new_parts: 'Новые'
+      found_count: 'Уже в базе'
+      state: 'Статус'
+      actions: ''
+      no_imports: 'Нет импортов'
+    show:
+      headers: 'Все колонки'
+      necessary_columns: 'Необходимые колонки'
+    new:
+      file: 'Файл'
+      type_of_import: 'Тип импорта'
+      new_import: 'Новый импорт'

@@ -1,0 +1,20 @@
+en:
+  imports:
+    index:
+      imports: 'Imports'
+      new_import: 'New Import'
+      created_at: 'Created at'
+      filename: 'Filename'
+      parts_count: 'Count'
+      new_parts: 'New'
+      found_count: 'Found'
+      state: 'State'
+      actions: 'Actions'
+      no_imports: 'No imports'
+    show:
+      headers: 'Headers'
+      necessary_columns: 'Necessary Columns'
+    new:
+      file: 'File'
+      type_of_import: 'Type of Import'
+      new_import: 'New Import'

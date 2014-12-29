@@ -1,0 +1,8 @@
+.wrap
+  h2= t('.questions')
+  .questions-list
+    = link_to t('.add_new_question'), new_question_path, class: 'btn' if current_user
+
+    = render partial: 'question', collection: @questions
+
+  .categories-right= render 'categories'

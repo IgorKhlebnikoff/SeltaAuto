@@ -1,0 +1,31 @@
+ru:
+  shared:
+    content_form:
+      category: 'Категория'
+    maintenance_form:
+      inspection_request: 'Заявка на ТО'
+      first_name: 'Имя*'
+      last_name: 'Фамилия*'
+      phone: 'Телефон*'
+      service_type: 'Вид услуг'
+      comment: 'Комментарий*'
+      send_request: 'Отправить заявку'
+    footer:
+      main: 'Главная'
+      last_news: 'Последние новости'
+      gallery: 'Галлерея'
+      services: 'Услуги'
+      contact_us: 'Контакты'
+    navigation:
+      main: 'Главная'
+      services: 'Услуги'
+      autoparts: 'Каталог запчастей'
+      parts: 'Запчасти'
+      oils: 'Масла'
+      news: 'Новости'
+      gallery: 'Галлерея'
+      forums: 'Форум'
+      contacts: 'Контакты'
+      certificates: 'Сертификаты'
+    header:
+      inspection_requests: "Заявки на ТО (%{count})"

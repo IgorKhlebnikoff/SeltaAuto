@@ -1,0 +1,9 @@
+tr
+  td.date= import.created_at.tidy_date
+  td.type= import.type.demodulize
+  td.filename= link_to import.file_file_name, import_path(import)
+  td.parts-count= import.snapshots_count
+  td.new-parts= import.new_parts
+  td.found-parts= import.found_parts
+  td= import.not_imported? ? link_to(t('states.start_import'), make_snapshots_import_path(import)) : t("states.#{import.state}")
+  td= link_to(t('destroy'), import_path(import), method: :delete)

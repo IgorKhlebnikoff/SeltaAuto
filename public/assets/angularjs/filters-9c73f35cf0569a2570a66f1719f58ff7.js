@@ -1,0 +1,1 @@
+(function(){var r;r=angular.module("filters",[]),r.filter("startFrom",function(){return function(r,t){return t=+t,r.slice(t)}})}).call(this);
