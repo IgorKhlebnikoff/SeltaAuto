@@ -51,3 +51,5 @@ group :test do
   #gem 'fixture_builder'
   gem 'mysql2'
 end
+gem 'pg'
+gem 'rails_12factor'
