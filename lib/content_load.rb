@@ -2,7 +2,7 @@ module ContentLoad
   def ContentLoad.add_services
     Service.destroy_all
     require 'csv'
-    csv_text = File.read('lib/photos/service.csv')
+    csv_text = File.read{"Rails.root/lib/photos/service.csv"}
     csv = CSV.parse(csv_text, :headers => true)
     csv.each do |row|
       a = row.to_hash
