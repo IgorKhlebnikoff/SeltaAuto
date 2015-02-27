@@ -3,11 +3,8 @@
     h1 Заявка на ТО
 
     = form_tag '#', name: 'maintenance'
-      = label_tag 'first_name', 'Имя*'
-      = text_field_tag 'first_name', nil, class: 'form-control', required: true, data: { ng_model: 'post.first_name'}
-
-      = label_tag 'last_name', 'Фамилия*'
-      = text_field_tag 'last_name', nil, class: 'form-control', required: true, data: { ng_model: 'post.last_name'}
+      = label_tag 'name', 'Имя*'
+      = text_field_tag 'name', nil, class: 'form-control', required: true, data: { ng_model: 'post.name'}
 
       = label_tag 'phone', 'Телефон*'
       = text_field_tag 'phone', nil, class: 'form-control', required: true, data: { ng_model: 'post.phone'}

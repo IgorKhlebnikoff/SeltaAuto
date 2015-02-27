@@ -1,7 +1,6 @@
 @import "compass/css3";
-//@import "compass/css3/opacity";
-//@import 'compass/css3/transition';
-//@import 'compass/css3/border-radius';
+@import 'compass/css3/box-shadow';
+@import 'compass/css3/border-radius';
 @import "mixins";
 
 // Icons FontAwesome
@@ -60,4 +59,14 @@
 
 .translation_missing {
   outline: 2px solid red;
+}
+
+.block-separator {
+  padding-bottom: 24px;
+  @include box-shadow(inset 0 0px 15px 0px rgba(0, 0, 0, 0.15));
+  @include clearfix;
+}
+
+.large-top {
+  border-top: 7px solid white;
 }

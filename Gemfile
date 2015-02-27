@@ -52,3 +52,8 @@ group :test do
 end
 gem 'pg'
 gem 'rails_12factor'
+
+gem 'capistrano'
+gem 'capistrano-rails'
+gem 'capistrano-bundler'
+gem 'capistrano-rvm'

@@ -7,4 +7,6 @@ en:
       add_new_service: 'Add Service'
     edit:
       edit_service: 'Edit service'
+    show:
+      back: 'Back to services'
 

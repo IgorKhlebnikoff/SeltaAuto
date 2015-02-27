@@ -1,4 +1,3 @@
-
 class Content < ActiveRecord::Base
   include ContentLoad
   has_attached_file :picture, styles: {

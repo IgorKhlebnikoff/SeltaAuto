@@ -1,10 +1,11 @@
 li
-  = link_to image_tag(partner.picture), partner.email, target: '_blank'
+  = link_to image_tag(partner.picture), partner.email, target: '_blank', class: 'partners-logo'
   h4
     = link_to "#{partner.name}", partner.email, target: '_blank'
     - if current_user.try(:is_admin?)
       = link_to "(#{t('delete')})", partner_path(partner), class: 'add-content', method: 'delete'
-  br
+  - partner.certificates.each do |certificate|
+    .partner-sertificate
+      = link_to image_tag(certificate.asset.url(:logo)), certificate.asset.url(:original), data: { lightbox: 'certificates' }
   .partners
     span= partner.description.html_safe
-

@@ -36,6 +36,6 @@ class InspectionRequestsController < ApplicationController
   end
 
   def inspection_request_params
-    params.require(:inspection_request).permit(:first_name, :last_name, :phone_number, :comment)
+    params.require(:inspection_request).permit(:name, :phone_number, :comment)
   end
 end

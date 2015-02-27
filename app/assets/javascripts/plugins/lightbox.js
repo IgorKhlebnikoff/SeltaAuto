@@ -282,7 +282,7 @@
 
     // Display previous and next navigation if appropriate.
     Lightbox.prototype.updateNav = function() {
-      // Check to see if the browser supports touch events. If so, we take the conservative approach
+      // Check to see if the browser support touch events. If so, we take the conservative approach
       // and assume that mouse hover events are not supported and always show prev/next navigation
       // arrows in image sets.
       var alwaysShowNav = false;

@@ -1,7 +1,6 @@
 FactoryGirl.define do
   factory :inspection_request do
-    first_name   { Faker::Name.first_name }
-    last_name    { Faker::Name.last_name }
+    name   { Faker::Name.first_name }
     phone_number '+38-097-123-12-12'
     comment      { Faker::Lorem.sentence }
   end

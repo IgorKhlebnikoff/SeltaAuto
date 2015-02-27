@@ -4,5 +4,4 @@ namespace :admin do
   task load_partners: :environment do
     PartnersLoad.add_partners
   end
-
 end

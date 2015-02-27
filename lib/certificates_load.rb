@@ -9,6 +9,7 @@ module CertificateLoad
       certificate = Certificate.new
       file_of_picture = File.open(a["picture"])
       certificate.asset = file_of_picture
+      certificate.partner_id =
       file_of_picture.close
       certificate.save!
     end

@@ -4,6 +4,4 @@ namespace :admin do
   task load_services: :environment do
     ContentLoad.add_services
   end
-
-
 end

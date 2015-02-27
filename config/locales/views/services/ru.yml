@@ -7,4 +7,5 @@ ru:
       add_new_service: 'Добавить услугу'
     edit:
       edit_service: 'Редактировать услугу'
-
+    show:
+      back: 'Вернуться к услугам'

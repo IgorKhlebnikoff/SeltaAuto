@@ -8,8 +8,7 @@ inspectionRequestsControllers.controller 'InspectionRequestsController', ($scope
   $scope.sendRequest = ->
     data = {
       inspection_request: {
-        first_name: $scope.first_name
-        last_name: $scope.last_name
+        name: $scope.name
         phone_number: $scope.phone_number
         comment: $scope.comment
       }

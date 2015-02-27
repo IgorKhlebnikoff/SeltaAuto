@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141218141759) do
+ActiveRecord::Schema.define(version: 20150227132723) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,14 @@ ActiveRecord::Schema.define(version: 20141218141759) do
   create_table "categories", force: true do |t|
     t.string "name"
   end
+
+  create_table "certificates", force: true do |t|
+    t.integer  "content_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "certificates", ["content_id"], name: "index_certificates_on_content_id", using: :btree
 
   create_table "comments", force: true do |t|
     t.text     "body"
@@ -88,8 +96,7 @@ ActiveRecord::Schema.define(version: 20141218141759) do
   end
 
   create_table "inspection_requests", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "name"
     t.string   "phone_number"
     t.text     "comment"
     t.boolean  "viewed"
@@ -103,9 +110,10 @@ ActiveRecord::Schema.define(version: 20141218141759) do
     t.integer  "asset_file_size"
     t.string   "asset_content_type"
     t.boolean  "active",             default: true
+    t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "type"
+    t.integer  "partner_id"
   end
 
   create_table "products", force: true do |t|

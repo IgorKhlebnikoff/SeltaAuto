@@ -15,6 +15,17 @@ module PartnersLoad
       partner.picture = file_of_picture
       file_of_picture.close
       partner.save!
+      csv_text_certificate = File.read("lib/photos/certificates/#{a["name"]}.csv")
+      csv_certificate = CSV.parse(csv_text_certificate, :headers => true)
+      csv_certificate.each do |roww|
+        b = roww.to_hash
+        certificate = Certificate.new
+        file_of_certificate_picture = File.open(b["picture"])
+        certificate.asset = file_of_certificate_picture
+        file_of_certificate_picture.close
+        certificate.partner_id = partner.id
+        certificate.save!
+      end
     end
   end
 end

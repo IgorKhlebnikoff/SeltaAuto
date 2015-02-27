@@ -1,23 +1,19 @@
-section.home-type-services
+section.home-type-services.block-separator.large-top
   .wrap
     .home-services-list
       - @services.each do |service|
         .home-service-item
           h3= service.name
-          span= image_tag service.picture(:logo)
+          span= link_to(image_tag(service.picture(:logo)), service_path(service))
           .introtext
             p= strip_tags(service.description).truncate(107)
-            = link_to t('more'), services_path(anchor: 'engine'), class: 'more'
-
+            = link_to t('more'), service_path(service), class: 'more'
 .wrap
-  section.certificates
+  section.certificates.certificates-block-separator
     .wrap
       h3
         = t('.certificates')
         = link_to "(#{t('add')})", new_certificate_path, class: 'add-content' if current_user.try(:is_admin?)
-
-      .certificate-desc
-        = t('.certificates')
 
       ul.certificates-list
         = render partial: 'certificate', collection: @certificates
@@ -36,14 +32,13 @@ section.home-type-services
             span= strip_tags news.description.truncate(100)
             = link_to t('more'), news_path(news), class: 'more'
 
-  section.home-about-us
+  section.home-about-us.home-about-us-block-separator
     .wrap
       h3
-        = t('.our_partners')
+        = t('.partners')
         = link_to "(#{t('add')})", new_partner_path, class: 'add-content' if current_user.try(:is_admin?)
 
       .home-about-desc
-        = t('.partners')
         p
           = t('.wants_to_be_partner')
           = mail_to 'selta_auto@2upost.com'

@@ -2,6 +2,8 @@
 
 // Type services
 @import 'mixins';
+@import 'compass/css3/box-shadow';
+
 .home-type-services {
   padding: 30px 0 0;
   margin-bottom: 40px;
@@ -102,14 +104,24 @@
 }
 
 // About us
+
+.home-about-us-block-separator {
+  @include box-shadow(inset -10px 0 15px -15px rgba(0, 0, 0, 0.15));
+}
+
+.home-about-us {
+  h3 { margin-top: 20px; }
+}
+
 .home-about-us, .certificates {
   line-height: 1.5;
+  padding-bottom: 20px;
 
   h3 {
     font-size: 20px;
     font-weight: 800;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   .home-about-desc {
@@ -119,9 +131,9 @@
 
   ul { list-style: none; }
 
-  img {
+  .certificates-list img {
     max-width: 100%;
-    width: 268px;
+    height: 170px;
     margin-bottom: 15px;
   }
 
@@ -135,7 +147,6 @@
     margin-bottom: 30px;
   }
 
-
   .wrap { padding: 0; }
 
   .partners-list {
@@ -144,6 +155,16 @@
     }
     img {
       width: 100%;
+    }
+    .partner-sertificate {
+      width: 50px;
+      margin: 5px 3px;
+      border-radius: 5px;
+      img {
+        -webkit-box-shadow: -2px 2px 3px 1px rgba(37, 37, 37, 0.50);
+        -moz-box-shadow: -2px 2px 3px 1px rgba(37, 37, 37, 0.50);
+        box-shadow: -2px 2px 3px 1px rgba(37, 37, 37, 0.50);
+      }
     }
   }
 
@@ -161,31 +182,39 @@
       position: relative;
     }
 
+    .partners-logo img {
+      height: 170px;
+    }
+
     img {
       width: auto;
       max-width: none;
       display: inline;
-      height: 170px;
     }
 
     ul {
       margin-left: -3%;
+
+      & > *:first-child { margin-left: 3% }
+
+      & > *:last-child { border: none }
     }
 
     li {
-      margin-left: 3%;
+      padding: 0 2%;
       float: left;
       width: 30.3333%;
+      border-right: 1px solid lightgrey;
     }
-
-    // .wrap { padding: 0 20px; }
   }
 }
 
 // Latest news
 .home-latest-news {
   line-height: 1.2;
-  padding-bottom: 20px;
+  padding: 20px;
+  background: white;
+  border: 1px solid #eee;
 
   h3 {
     font-size: 20px;

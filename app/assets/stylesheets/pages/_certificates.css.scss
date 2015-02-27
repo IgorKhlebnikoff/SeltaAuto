@@ -2,14 +2,13 @@
 @import 'mixins';
 @import 'compass/css3/opacity';
 @import 'compass/css3/transition';
-
+@import 'compass/css3/box-shadow';
 
 .certificates-list{
   margin-left: 3%;
   @include clearfix;
-
-
 }
+
 .certificates-item{
   width: 18%;
   position: relative;
@@ -25,7 +24,6 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: contain;
-
 
   > a {
     width: 60%;
@@ -56,11 +54,11 @@
     }
   }
 
-  // show buttons action
   &:hover {
     > a, .certificates-action { @include opacity(1); }
   }
 }
+
 .certificates-action {
   width: 60%;
   font-size: 26px;
@@ -71,11 +69,14 @@
   @include opacity(0);
   @include transition(.15s);
 
-
   .icons {
     position: relative;
     right: 0;
     top: 1px;
 
   }
+}
+
+.certificates-block-separator {
+  @include box-shadow(inset 10px -10px 15px -15px rgba(0, 0, 0, 0.15));
 }

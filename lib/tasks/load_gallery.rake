@@ -4,5 +4,4 @@ namespace :admin do
   task load_gallery: :environment do
     GalleryLoad.add_gallery
   end
-
 end

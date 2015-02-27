@@ -1,5 +1,5 @@
 li
-  .img= image_tag(certificate.asset)
+  .img= image_tag(certificate.asset.url(:logo))
   h4
     - if current_user.try(:is_admin?)
       = link_to "(#{t('delete')})", certificate_path(certificate), class: 'add-content', method: 'delete'

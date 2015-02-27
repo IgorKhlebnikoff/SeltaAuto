@@ -10,6 +10,10 @@ class ServicesController < ContentsController
     super
   end
 
+  def show
+    @service = Service.find(params[:id])
+  end
+
   def create
     respond_with(Service.create(service_params), location: services_path)
   end
