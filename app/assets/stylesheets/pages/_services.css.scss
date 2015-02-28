@@ -1,5 +1,7 @@
 // Services
 @import 'mixins';
+@import 'compass/css3/box-shadow';
+@import 'compass/css3/border-radius';
 
 .services-list {
   padding-left: 15px;
@@ -25,9 +27,7 @@
     border: 1px solid #eaeaea;
     width: 30%;
     margin: 15px 15px;
-    -webkit-box-shadow: -5px 5px 5px 0px rgba(144, 144, 144, 0.75);
-    -moz-box-shadow: -5px 5px 5px 0px rgba(144, 144, 144, 0.75);
-    box-shadow: -5px 5px 5px 0px rgba(144, 144, 144, 0.75);
+    @include box-shadow(-5px 5px 5px 0px rgba(144, 144, 144, 0.75));
     border-radius: 7px;
 
     span {
@@ -40,9 +40,9 @@
     .introtext {
       padding: 15px 15px;
       background-color: #ffffff;
-      -webkit-box-shadow: 0px -3px 5px 0px rgba(163, 163, 163, 0.75);
-      -moz-box-shadow: 0px -3px 5px 0px rgba(163, 163, 163, 0.75);
-      box-shadow: 0px -3px 5px 0px rgba(163, 163, 163, 0.75);
+      @include box-shadow(0px -3px 5px 0px rgba(163, 163, 163, 0.75));
+      @include border-bottom-right-radius(7px);
+      @include border-bottom-left-radius(6px);
 
       h3 {
         font-weight: bold;
