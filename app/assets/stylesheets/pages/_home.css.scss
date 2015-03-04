@@ -156,10 +156,17 @@
     img {
       width: 100%;
     }
+
     .partner-sertificate {
       width: 50px;
       margin: 5px 3px;
       border-radius: 5px;
+      min-height: 80px;
+
+      .padding-for-horizontall {
+        padding-top: 15px;
+      }
+
       img {
         -webkit-box-shadow: -2px 2px 3px 1px rgba(37, 37, 37, 0.50);
         -moz-box-shadow: -2px 2px 3px 1px rgba(37, 37, 37, 0.50);

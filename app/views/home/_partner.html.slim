@@ -6,6 +6,11 @@ li
       = link_to "(#{t('delete')})", partner_path(partner), class: 'add-content', method: 'delete'
   - partner.certificates.each do |certificate|
     .partner-sertificate
-      = link_to image_tag(certificate.asset.url(:logo)), certificate.asset.url(:original), data: { lightbox: 'certificates' }
+      - horizontal = link_to image_tag(certificate.asset.url(:logo)), certificate.asset.url(:original), data: { lightbox: 'certificates' }
+      - if certificate.asset_file_name == '10003.jpg'
+        .padding-for-horizontall
+          = horizontal
+      - else
+        = horizontal
   .partners
     span= partner.description.html_safe
