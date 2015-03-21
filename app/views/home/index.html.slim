@@ -9,12 +9,11 @@ section.home-type-services.block-separator.large-top
             p= strip_tags(service.description).truncate(107)
             = link_to t('more'), service_path(service), class: 'more'
 .wrap
+  .certificates
+    h3 = t('.certificates')
   section.certificates.certificates-block-separator
     .wrap
-      h3
-        = t('.certificates')
-        = link_to "(#{t('add')})", new_certificate_path, class: 'add-content' if current_user.try(:is_admin?)
-
+      = link_to "(#{t('add')})", new_certificate_path, class: 'add-content' if current_user.try(:is_admin?)
       ul.certificates-list
         = render partial: 'certificate', collection: @certificates
 
